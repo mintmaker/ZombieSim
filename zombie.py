@@ -23,6 +23,15 @@ class Map:
 
 
 
+class World:
+
+    def __init__(self,
+                 size : tuple,
+                 humans : tuple,
+                 zombies : tuple
+                 ):
+
+
 
 if __name__ == '__main__':
     map = Map(MAP_SIZE)
