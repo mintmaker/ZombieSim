@@ -27,3 +27,4 @@ class Map:
 if __name__ == '__main__':
     map = Map(MAP_SIZE)
     print(map[10][10])
+    print("hi")
