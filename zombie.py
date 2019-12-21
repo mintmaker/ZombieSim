@@ -72,6 +72,3 @@ class World:
 if __name__ == '__main__':
     map = Map(MAP_SIZE)
     world = World(humans=(5000, np.zeros((5000, 1))))
-    #print(map[10][10])
-    print('also something')
-    print('hi')
