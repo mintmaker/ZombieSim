@@ -16,15 +16,19 @@ MAP_SIZE = (301, 301)
 
 class Map:
     '''
-    The Map object handles as the map, you can get the information about the current sistuation
+    The Map object handles as the map and here is the information of the simulation stored
 
-        Args:
-            size (tuple): The arg defines the size of the map
+    Args:
+    size : tuple
+        The arg defines the size of the map
 
-        Attributes:
-            size (tuple): This is the size of the map
-            numpy (numpy.array): The numpy.array represents the current map
+    Attributes:
+    size : tuple
+        size of the map
+    numpy : numpy.array
+        represents the current map
     '''
+
     def __init__(self, size):
         self.size = size
         self.numpy = np.zeros(self.size)
@@ -42,18 +46,29 @@ class World:
     '''
     The World object handles as the world in the simlation and is used as an simulation itself.
 
-        Args:
-            size (tuple): The arg defines the size of the simulated city
-            humans (tuple): The arg defines in with first item the number of humans and with the second one the positions or the method for positioning.
-            humans (tuple): The arg defines in with first item the number of zombies and with the second one the positions or the method for positioning.
+    Parameters
+    ----------
+    size : tuple (int, int)
+        size of the simulated city
+    humans : tuple (int, str/list/numpy.array/tuple)
+        first item is the number of zombies and the second item describes the positioning method or positions
+    humans tuple (int, str/list/numpy.array/tuple)
+        first item is the number of zombies and the second item describes the positioning method or positions
 
-        Attributes:
-            size (tuple): This is the size of the map of the simulation
-            nb_humans (int): This is the number of humans at the begging of the simulation
-            nb_zombies (int): This is the number of zombies at the begging of the simulation
-            humans_positions (numpy.array): This numpy array represents the positions of the humans
-            zombies_positions (numpy.array): This numpy array represents the positions of the zombies
-        '''
+    Attributes
+    ----------
+    size : tuple
+        size of the map of the simulation
+    nb_humans : int
+        number of humans at the beginning of the simulation
+    nb_zombies : int
+        This is the number of zombies at the beginning of the simulation
+    humans_positions : numpy.array
+        represents the positions of the humans
+    zombies_positions : numpy.array
+        represents the positions of the zombies
+    '''
+
     def __init__(self,
                  size : tuple = (100, 100),
                  humans : tuple = (5000, 'random'),
