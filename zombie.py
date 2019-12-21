@@ -54,11 +54,20 @@ class World:
         self.map = Map(size=self.size)
 
         if isinstance(humans[1], str):
-            pass
+            self.human_pos_method = str(humans[1])
+            self.map.add_humans(method=self.human_pos_method, nb=self.nb_humans)
 
         if isinstance(humans[1], tuple) or isinstance(humans[1], list) or isinstance(humans[1], np.ndarray):
             self.human_positions = np.array(humans[1])
             self.map.add_humans(positions=self.human_positions)
+
+        if isinstance(zombies[1], str):
+            self.zombie_pos_method = str(zombies[1])
+            self.map.add_zombies(method=self.zombie_pos_method, nb=self.nb_zombies)
+
+        if isinstance(zombies[1], tuple) or isinstance(zombies[1], list) or isinstance(zombies[1], np.ndarray):
+            self.zombie_positions = np.array(zombies[1])
+            self.map.add_zombies(positions=self.zombie_positions)
 
 
 

@@ -30,5 +30,15 @@ class Map:
             pass
         elif 'method' in kwargs.keys() and 'nb' in kwargs.keys():
             pass
-        else: # Some bug here
-            warnings.warn(f'You don\'t have specified any of the needed args (positions, method, nb), you specified {list(kwargs.keys())}', UserWarning)
+        else:
+            warnings.warn(f'You don\'t have specified any of the needed args (positions, method, nb), you specified {list(kwargs.keys())}', UserWarning) #TODO: fix the bug
+
+    def add_zombies(self, **kwargs):
+        if 'positions' in kwargs.keys():
+            pass
+        elif 'method' in kwargs.keys() and 'nb' in kwargs.keys():
+            pass
+        else:  # Some bug here
+            warnings.warn(
+                f'You don\'t have specified any of the needed args (positions, method, nb), you specified {list(kwargs.keys())}',
+                UserWarning)
