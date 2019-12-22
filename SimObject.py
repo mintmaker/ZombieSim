@@ -22,3 +22,8 @@ class SimObject:
         pass
 
 
+
+    def step(self):
+        self.go(method='random')
+
+
