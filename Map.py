@@ -6,7 +6,7 @@ import warnings
 MAP_SIZE = (301, 301)
 
 
-class Map:
+class Map: #TODO: add go functions, and ovethink format
     '''
     The Map object handles as the map and here is the information of the simulation stored
 
@@ -21,8 +21,24 @@ class Map:
         represents the current map
     '''
 
-    def __init__(self, size):
-        self.size = size
+
+    def __init__(self,
+                 size,
+                 mode='yx',
+                 ENC_HUMAN=1,
+                 ENC_ZOBIE=2,
+                 ENC_NULL=0):
+        self.mode = mode
+        if mode == 'xy':
+            self.size = size
+        elif mode == 'yx':
+            self.size = (size[1], size[0])
+        else:
+            raise TypeError(f'Excpected yx or xy, got {mode}')
+
+        self.ENC_HUMAN = ENC_HUMAN
+        self.ENC_ZOMBIE = ENC_ZOBIE
+        self.ENC_NULL= ENC_NULL
         #self.numpy = np.zeros((self.size[0],self.size[1], 2), dtype=np.int32) # Version with multiple objects in one field
         self.numpy = np.zeros(self.size)
         self.ids = {}
@@ -45,6 +61,12 @@ class Map:
             pass
         else:  # Some bug here
             raise TypeError('no correct kwargs')
+
+    def human_up(self, y, x):
+        next_x, next_y = (x, y)
+        if not ( self.numpy[y][x] == self.ENC_HUMAN):
+            self.numpy[y][x]= self.ENC_NULL
+            self.numpy[next_y][next_x] = self.ENC_HUMAN
 
 if __name__ == '__main__':
     map = Map(size=(301, 301))
