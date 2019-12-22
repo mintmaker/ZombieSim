@@ -4,5 +4,21 @@ class SimObject:
         self.position_at_start = position
         self.position = position
 
-    def go(self):
-        self.
+    def go(self, **kwargs):
+        if 'method' in kwargs.keys():
+            if kwargs['method'] == 'random':
+                actions = [self.forward, self.backward, self.left, self.right]
+
+    def forward(self):
+        pass
+
+    def backward(self):
+        pass
+
+    def left(self):
+        pass
+
+    def right(self):
+        pass
+
+
