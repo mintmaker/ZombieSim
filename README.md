@@ -6,9 +6,9 @@ Special Thanks to Danny
 
 ZombieSim:
 This python application simulates a city with some zombies.
-The whole maintaining process etc. will be done in German. I do support and develop the project, but I do not have much time. That's why the repo isn't updated too often.
+The whole maintaining process etc. will be done in German. @mintmaker and @Clemens05 do support and develop the project, but we are not consistently updating the codebase.
 
 German:
 Dieses Python-Programm simuliert eine Stadt mit Zombies.
-Der ganze Maintaining-Prozess etc. wird in Detusch durchgefüht. Ich supporte und entwickle dieses Projekt, aber ich habe nicht viel Zeit. Deshalb wird das Repo nicht oft geupdated
+Der ganze Maintaining-Prozess etc. wird in Detusch durchgefüht. @mintmaker und @Clemens05 supporten und entwicklen dieses Projekt, aber wir updaten die Codebasis nicht konsistent.
 
